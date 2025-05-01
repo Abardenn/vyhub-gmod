@@ -12,7 +12,7 @@ local meta_ply = FindMetaTable("Player")
 function VyHub.Player:initialize(ply, retry)
     if not IsValid(ply) then return end
 
-    local steamid = ply:SteamID64()
+    local steamid = tostring( ply:SteamID64() )
 
     VyHub:msg(f("Initializing user %s, %s", ply:Nick(), steamid))
 
